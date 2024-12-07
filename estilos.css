@@ -1,0 +1,350 @@
+/* Estilo general del cuerpo */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E6E6FA; /* Morado claro */
+    color: #333; /* Texto en color oscuro para contraste */
+}
+
+/* Estilo del encabezado */
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url("img/Dani/fondo.jpg"); /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    color: #FFFFFF; /* Texto blanco para contraste */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para resaltar el texto */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0 0;
+    padding: 50px;
+}
+
+/* Estilo de la sección de galería */
+main section {
+    text-align: center;
+}
+
+main section h2 {
+    font-size: 2em;
+    color: #800080; /* Púrpura */
+}
+
+main section div {
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+}
+
+main section img {
+    border: 5px solid #BA55D3; /* Morado medio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
+}
+
+main section p {
+    margin-top: 10px;
+    font-style: italic;
+    color: #4B0082; /* Morado intenso */
+}
+
+/* Estilo para la galería */
+.galeria {
+    display: flex;
+    flex-direction: column; /* Ordena los elementos verticalmente */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.galeria div {
+    text-align: center; /* Centra el texto debajo de cada imagen */
+    width: 100%; /* Cada imagen ocupará todo el ancho del contenedor */
+}
+
+.galeria img {
+    width: 300px; /* Ancho fijo para las imágenes */
+    height: 400px; /* Alto fijo para las imágenes */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio definido */
+    border: 4px solid #BA55D3; /* Borde morado */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.galeria p {
+    margin-top: 10px;
+    font-style: italic;
+    color: #4B0082; /* Texto morado intenso */
+}
+
+/* Estilo para la nueva sección de mensaje de amor */
+.mensaje-amor {
+    background-color: #E0BBE4; /* Fondo color lavanda claro */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Reduce el relleno de la sección */
+    margin-top: 10px; /* Reduce el espacio superior */
+    margin-bottom: 10px; /* Reduce el espacio inferior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.mensaje-amor h2 {
+    font-size: 24px;
+    color: #BA55D3; /* Color morado para el encabezado */
+}
+
+.mensaje-amor p {
+    font-size: 20px;
+    font-style: italic;
+    color: #4B0082; /* Texto morado */
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 20px auto; /* Centra el párrafo */
+}
+
+/* Estilo para el slider */
+.slider {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.slider h2 {
+    font-size: 24px;
+    color: #BA55D3;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.4s ease-in-out; /* Movimiento suave */
+}
+
+.slide {
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan */
+    width: 100%;
+}
+
+.slider-wrapper img {
+    width: 250px; /* Tamaño fijo para todas las fotos */
+    height: 350px; /* Tamaño fijo para todas las fotos */
+    object-fit: cover; /* Asegura que la imagen se recorte para no distorsionarse */
+    margin: 0;
+}
+
+/* Animación del slider (de derecha a izquierda) */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }
+}
+
+/* Reemplazo de animación por intervalos de 4 segundos */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    3.33% { transform: translateX(-100%); }
+    6.66% { transform: translateX(-200%); }
+    10% { transform: translateX(-300%); }
+    13.33% { transform: translateX(-400%); }
+    16.66% { transform: translateX(-500%); }
+    20% { transform: translateX(-600%); }
+    23.33% { transform: translateX(-700%); }
+    26.66% { transform: translateX(-800%); }
+    30% { transform: translateX(-900%); }
+    33.33% { transform: translateX(-1000%); }
+    36.66% { transform: translateX(-1100%); }
+    40% { transform: translateX(-1200%); }
+    43.33% { transform: translateX(-1300%); }
+    46.66% { transform: translateX(-1400%); }
+    50% { transform: translateX(-1500%); }
+    53.33% { transform: translateX(-1600%); }
+    56.66% { transform: translateX(-1700%); }
+    60% { transform: translateX(-1800%); }
+    63.33% { transform: translateX(-1900%); }
+    66.66% { transform: translateX(-2000%); }
+    70% { transform: translateX(-2100%); }
+    73.33% { transform: translateX(-2200%); }
+    76.66% { transform: translateX(-2300%); }
+    80% { transform: translateX(-2400%); }
+    83.33% { transform: translateX(-2500%); }
+    86.66% { transform: translateX(-2600%); }
+    90% { transform: translateX(-2700%); }
+    93.33% { transform: translateX(-2800%); }
+    96.66% { transform: translateX(-2900%); }
+    100% { transform: translateX(0); }
+}
+
+.slider-wrapper {
+    animation: slide 60s infinite; /* 4 segundos por cada imagen */
+}
+
+/* Estilo para la sección Foto con Audio */
+.foto-audio {
+    display: flex;
+    flex-direction: column; /* Asegura disposición vertical */
+    gap: 20px; /* Espaciado entre cada elemento */
+    padding: 10px; /* Margen interno para evitar contenido pegado a los bordes */
+}
+.foto-audio-container {
+    display: flex;
+    flex-direction: column; /* Organización vertical */
+}
+
+.foto-audio-item {
+    text-align: center;
+}
+
+.foto {
+    width: 250px; /* Establece un tamaño fijo para las fotos */
+    height: 100%; /* Establece un tamaño fijo para las fotos */
+    object-fit: cover; /* Hace que la imagen se ajuste sin distorsionarse */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar la imagen */
+}
+
+.descripcion {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #4B0082; /* Color morado */
+}
+
+audio {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+}
+/* Estilo para el mensaje bonito */
+.mensaje-bonito {
+    background-color: #E0BBE4; /* Fondo color lavanda claro */
+    text-align: center; /* Centra el texto */
+    padding: 40px; /* Añade relleno alrededor del texto */
+    margin-top: 30px; /* Añade espacio superior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.mensaje-bonito h2 {
+    font-size: 2.5em;
+    color: #BA55D3; /* Color morado para el encabezado */
+}
+
+.mensaje-bonito p {
+    font-size: 1.5em;
+    color: #4B0082; /* Texto morado */
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 20px auto; /* Centra el párrafo */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+/* Estilo para el contenedor de la contraseña */
+.password-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.password-container input {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 200px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 2px solid #BA55D3;
+}
+
+.password-container button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #BA55D3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password-container button:hover {
+    background-color: #800080; /* Cambio de color al pasar el ratón */
+}
+
+/* Media Query para iPhone 13 */
+@media only screen and (max-width: 390px) {
+    /* Reducción de tamaños de fuente */
+    body {
+        font-size: 0.9em;
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduce el tamaño del título */
+    }
+
+    header p {
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Imágenes más pequeñas */
+    }
+
+    .galeria img {
+        width: 150px; /* Ajusta las imágenes */
+        height: 225px;
+    }
+
+    .mensaje-amor h2 {
+        font-size: 1.8em; /* Ajusta el título */
+    }
+
+    .mensaje-amor p {
+        font-size: 1.2em;
+    }
+
+    .slider-wrapper img {
+        width: 200px;
+        height: 300px; /* Ajusta el tamaño del slider */
+    }
+
+    footer {
+        font-size: 1em; /* Ajusta el pie de página */
+    }
+
+    .password-container input {
+        width: 80%; /* Ajusta el tamaño de la caja de texto */
+    }
+
+    .password-container button {
+        font-size: 1em;
+    }
+
+    .mensaje-bonito h2 {
+        font-size: 1.6em; /* Ajusta el título del mensaje */
+    }
+
+    .mensaje-bonito p {
+        font-size: 1em; /* Ajusta el tamaño del mensaje */
+    }
+
+    .mensaje-bonito {
+        padding: 10px;
+    }
+}
